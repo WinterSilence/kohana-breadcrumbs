@@ -40,7 +40,7 @@ Breadcrumbs::template('breadcrumbs/bootstrap');
 
 Use HMVC request for get breadcrumbs block in your View\Controller:
 <pre>
-<?php echo Request::factory('breadcrumbs')->execute()->body() ?>
+echo Request::factory('breadcrumbs')->execute()->body();
 </pre>
 Also you can set View template and add breadcrumbs, for send data use GET method:
 <pre>
