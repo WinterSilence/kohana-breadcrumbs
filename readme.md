@@ -37,3 +37,19 @@ Gets or sets default View template name:
 $this->template->set_filename(Breadcrumbs::template());
 Breadcrumbs::template('breadcrumbs/bootstrap');
 </pre>
+
+Use HMVC request for get breadcrumbs block in your View\Controller:
+<pre>
+<?php echo Request::factory('breadcrumbs')->execute()->body() ?>
+</pre>
+Also you can set View template and add breadcrumbs, for send data use GET method:
+<pre>
+$data = array(
+	'template' => 'breadcrumbs_template_path',
+	'items' => array(
+		'/posts/'    => 'Posts',
+		'/post/124/' => 'Post 124 title',
+	),
+);
+echo Request::factory('breadcrumbs')->query($data)->execute()->body();
+</pre>
