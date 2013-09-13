@@ -1,4 +1,4 @@
-<?php defined('SYSPATH') OR die('No direct script access.') />
+<?php defined('SYSPATH') OR die('No direct script access.') ?>
 
 <?php if (isset($breadcrumbs)): ?>
 	<?php foreach ($breadcrumbs as $url => $name): ?>
